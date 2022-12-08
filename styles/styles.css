@@ -27,7 +27,7 @@ body {
     box-shadow: 2px 2px 2px #034646;
     transition: all 200ms ease-in-out;
     }
-  .button {
+  #srch {
       padding: 5px;
       width: 75px;
   }
