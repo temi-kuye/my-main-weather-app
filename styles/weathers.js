@@ -26,6 +26,14 @@ let months = [
 let month = months[now.getMonth()];
 currentDate.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes}, ${year}`;
 
+function todaysDate(timestamp) {
+    let date = new Date(timestamp);
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let day = date.getDay();
+    return `${day} ${hours}:${minutes}`
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#place").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(
@@ -45,6 +53,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document.querySelector("#todays-date").innerHTML = todaysDate(response.data.dt * 1000);
 }
 
 function search(city) {
