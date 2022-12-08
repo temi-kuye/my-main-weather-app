@@ -1,95 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
-    <script
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Weather Forecast</title>
+	<script
       src="https://kit.fontawesome.com/b016f168a9.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="styles/styles.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-  </head>
-  <body>
-    <div class="container col-9">
-        <div>
-          <form>
-            <div class="search-bar col-6" id="search-form">
-              <input
-                type="city"
-                id="search-city"
-                placeholder="Enter your city here"
-                autofocus
-              />
-              <a href="" type="submit" class="btn btn-primary col-4" id="srch"
-                >Search</a
-              >
-              <a href="" class="btn btn-primary col-2" id="btn">📍</a>
-            </div>
-          </form>
-        </div>
-      <div class="location">
-        <div id="place"></div>
-        <div id="todays-date"></div>
-      </div>
-      <div class="degree">
-        <span id="temp"> </span>°C
-        <div id="today" class="fa-solid fa-cloud-bolt"></div>
-      </div>
-      <div class="weather-condition"></div>
+	</head>
+	<body>
+	
+<div class="container">
+<div class="app"></div>
+	<h1>Lagos</h1>
+<ul>
+<li>
+  Thursday 20:00
+</li>
+<li>
+	Sunny and Cloudy
+</li>
+</ul>
+<div class="row"> 
+<div class="col-6">
+	<img src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png" alt="Sunny and Cloudy"/>
+	28°C | °F
+</div>
+<div class="col-6">
+<ul>
+	<li>
+		Precipitation: 2%
+	</li>
+	<li>
+		Humidity: 84%
+    </li>
+	<li>
+		Wind: 10 km/h
+	</li>
+	</ul>
+	</div>
+ </div>
+ </div>
+<small>
+	<a href="https://github.com/temi-kuye/my-main-weather-app">Open-source code, </a>by Victoria Kuye
+</small>
+</div>
+	<script src="styles/weathers.js"></script>
+</body>
 
-      <div class="condition-breakdown">
-        <ul>
-          <li>H:<span id="high"></span>°C L:<span id="low"></span>°C</li>
-          <li>Humidity: <span id="humidity"></span>%</li>
-          <li>Wind: <span id="wind"></span>km/h</li>
-        </ul>
-      </div>
-
-      <div class="future-weather">
-        <ul>
-          <hr />
-          <li id="current">
-            Today <i class="fa-solid fa-cloud-bolt icon"></i>
-            <span class="future-degrees">31°C</span>
-          </li>
-          <hr />
-          <li>
-            Tue <i class="fa-solid fa-cloud-sun icon"></i>
-            <span class="future-degrees">33°C</span>
-          </li>
-          <hr />
-          <li>
-            Wed <i class="fa-solid fa-cloud-sun icon"></i>
-            <span class="future-degrees">32°C</span>
-          </li>
-          <hr />
-          <li>
-            Thu <i class="fa-solid fa-cloud-showers-heavy icon"></i>
-            <span class="future-degrees">31°C</span>
-          </li>
-          <hr />
-          <li>
-            Fri <i class="fa-solid fa-cloud-sun-rain icon"></i>
-            <span class="future-degrees">32°C</span>
-          </li>
-          <hr />
-          <li>
-            Sat <i class="fa-solid fa-cloud-sun icon"></i>
-            <span class="future-degrees">33°C</span>
-          </li>
-          <hr />
-          <li>
-            Sun <i class="fa-solid fa-cloud-sun icon"></i>
-            <span class="future-degrees">33°C</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <footer>Find my <a href="https://github.com/temi-kuye/The-weather-app">GitHub Repository </a>here.</footer>
-    <script src="styles/weathers.js"></script>
-  </body>
 </html>
