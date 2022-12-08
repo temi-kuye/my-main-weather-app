@@ -14,18 +14,19 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container col-9">
       <form>
-        <div class="search-bar" id="search-form">
+        <div class="search-bar col-5" id="search-form">
           <input
             type="city"
             id="search-city"
             placeholder="Enter your city here"
             autofocus
           />
-          <a href="" type="submit" class="btn btn-primary" id="srch">Search</a>
+          <a href="" type="submit" class="btn btn-primary col-2" id="srch">Search</a> 
+          <a href="" class="btn btn-primary col-2" id="btn">📍</a>
         </div>
-        <a href="" class="btn btn-primary" id="btn">📍</a>
+       
       </form>
       <div class="location">
         <div id="place"></div>
