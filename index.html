@@ -21,24 +21,31 @@
   </head>
   <body>
     <div class="container">
+        <div class="app-wrapper">
       <div class="app">
+        <div class="where">
         <h1>Lagos</h1>
         <ul>
           <li>
-            Thursday 20:00
+            Thurs 20:00
           </li>
           <li>
             Sunny and Cloudy
           </li>
         </ul>
+    </div>
         <div class="row">
           <div class="col-6">
+            <div class="weather-temp">
             <img
               src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
               alt="Sunny and Cloudy"
             />
-            28°C | °F
-          </div>
+            <div class="degrees">
+            <strong>28</strong><span class="units">°C | <a href="#">°F</a> </span>
+            </div>
+            </div>
+        </div>
           <div class="col-6">
             <ul>
               <li>
@@ -53,12 +60,14 @@
             </ul>
           </div>
         </div>
-        <small>
+       
+      </div> 
+      <small>
           <a href="https://github.com/temi-kuye/my-main-weather-app"
             >Open-source code, </a
           >by Victoria Kuye
         </small>
-      </div>
+    </div>
     </div>
     <script src="styles/weathers.js"></script>
   </body>
