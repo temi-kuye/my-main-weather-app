@@ -15,21 +15,14 @@ body {
     
   }
   input {
-    display: inline;
     margin: 20px auto;
-    padding: 10px;
+    padding: 7px;
     color: rgb(110, 13, 15);
-    font-size: 18px;
-    border-radius: 25% 25% 25% 20%; 
+    font-size: 15px;
     background-color: rgb(230, 240, 89);
     border: 2px solid;
-    width: 180px;
     box-shadow: 2px 2px 2px #034646;
     transition: all 200ms ease-in-out;
-    }
-  #srch {
-      padding: 5px;
-      width: 75px;
   }
   input:hover {
     background: rgb(246, 243, 215);
