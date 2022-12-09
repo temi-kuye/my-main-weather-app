@@ -21,53 +21,44 @@
   </head>
   <body>
     <div class="container">
-        <div class="app-wrapper">
-      <div class="app">
-        <div class="where">
-        <h1>Lagos</h1>
-        <ul>
-          <li>
-            Thurs 20:00
-          </li>
-          <li>
-            Sunny and Cloudy
-          </li>
-        </ul>
-    </div>
-        <div class="row">
-          <div class="col-6">
-            <div class="weather-temp">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-              alt="Sunny and Cloudy"
-            />
-            <div class="degrees">
-            <strong>28</strong><span class="units">°C | <a href="#">°F</a> </span>
-            </div>
-            </div>
-        </div>
-          <div class="col-6">
+      <div class="app-wrapper">
+        <div class="app">
+          <div class="where">
+            <h1 id="city"></h1>
             <ul>
               <li>
-                Precipitation: 2%
+                Thurs 20:00
               </li>
-              <li>
-                Humidity: 84%
-              </li>
-              <li>
-                Wind: 10 km/h
-              </li>
+              <li id="condition"></li>
             </ul>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="weather-temp">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                  alt="Sunny and Cloudy"
+                />
+                <div class="degrees">
+                  <strong id="temp"></strong
+                  ><span class="units">°C | <a href="#">°F</a> </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="windSpeed"></span> km/h</li>
+              </ul>
+            </div>
+          </div>
         </div>
-       
-      </div> 
-      <small>
+        <small>
           <a href="https://github.com/temi-kuye/my-main-weather-app"
             >Open-source code, </a
           >by Victoria Kuye
         </small>
-    </div>
+      </div>
     </div>
     <script src="styles/weathers.js"></script>
   </body>

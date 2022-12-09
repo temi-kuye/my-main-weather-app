@@ -20,6 +20,7 @@ body {
     font-size: 16px;
     font-weight: 100;
     line-height: 19px;
+    text-transform: capitalize;
   }
    .app-wrapper {
      max-width: 600px;
@@ -41,7 +42,7 @@ body {
     width: 64px;
   }
   .weather-temp strong {
-    color: #000;
+    color: #31fae9;
     font-size: 64px;
     font-weight: 600;
     line-height: 1;
