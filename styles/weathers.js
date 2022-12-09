@@ -29,6 +29,7 @@ function formatDate(timestamp) {
     let wind = document.querySelector("#windSpeed");
     let todaysDate = document.querySelector("#date");
     let weatherIcon = document.querySelector("#icon");
+    celsiusTemp = response.data.main.temp;
     temperature.innerHTML = Math.round(response.data.main.temp);
     city.innerHTML = response.data.name;
     condition.innerHTML = response.data.weather[0].description;
@@ -55,6 +56,31 @@ function formatDate(timestamp) {
     search(cityInput.value);
   }
   
+  function convertFahTemp(event) {
+    event.preventDefault();
+    fahrenheit.classList.add("active");
+    celsius.classList.remove("active");
+    let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+    let temperature = document.querySelector("#temp");
+    temperature.innerHTML = Math.round(fahrenheitTemp);
+  }
+  
+  function convertCelsiusTemp(event) {
+    event.preventDefault();
+    celsius.classList.add("active");
+    fahrenheit.classList.remove("active");
+    let temperature = document.querySelector("#temp");
+    temperature.innerHTML = Math.round(celsiusTemp);
+  }
+  
+  let celsiusTemp = null;
+  
   let form = document.querySelector("#search-form");
   form.addEventListener("submit", searchSubmit);
+  
+  let fahrenheit = document.querySelector("#f-link");
+  fahrenheit.addEventListener("click", convertFahTemp);
+  
+  let celsius = document.querySelector("#celsius-link");
+  celsius.addEventListener("click", convertCelsiusTemp);
   
