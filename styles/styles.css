@@ -1,5 +1,9 @@
 body {
     font-family: arial, sans-serif;
+    background-image: url("images/cloudy.jpeg"), linear-gradient(to bottom, rgb(99, 248, 228), rgb(245, 245, 179), rgb(249, 204, 120));
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
   h1 {
     color: #f53071;
