@@ -24,12 +24,15 @@ body {
   li::first-letter {
     text-transform: capitalize;
   }
+  a {
+    text-decoration: none;
+  }  
    .app-wrapper {
      max-width: 600px;
     margin: 30px auto;
   }
   .app {
-   
+    background-color: #f1eaea;
     padding: 20px;
     border: 1px solid #eba6eb;
     border-radius: 5px;
