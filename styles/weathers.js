@@ -37,7 +37,7 @@ function displayForecast(response) {
 if (index < 6) {
 forecastHTML = forecastHTML + `<div class="col-2"> 
 <div class="forecast-date">${formatForecast(fcastDay.dt)}</div>
-        <img src="http://openweathermap.org/img/wn/${fcastDay.weather[0].icon}@2x.png" alt="" width="45">
+        <img src="https://openweathermap.org/img/wn/${fcastDay.weather[0].icon}@2x.png" alt="" width="45">
        <div class="forecast-temps">
         <span class="forecast-max-temp">${Math.round(fcastDay.temp.max)}°</span> 
         <span class="forecast-min-temp">${Math.round(fcastDay.temp.min)}°</span>
@@ -75,7 +75,7 @@ function getForecast(coordinates) {
     todaysDate.innerHTML = formatDate(response.data.dt * 1000);
     weatherIcon.setAttribute(
       "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
     weatherIcon.setAttribute("alt", response.data.weather[0].description);
 
