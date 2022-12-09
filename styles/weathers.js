@@ -42,9 +42,19 @@ function formatDate(timestamp) {
     weatherIcon.setAttribute("alt", response.data.weather[0].description);
   }
   
-  let apiKey = "99b8f9330a1bfba3a85e523fd3c2e528";
-  let city = "sydney";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  function search(city) {
+    let apiKey = "99b8f9330a1bfba3a85e523fd3c2e528";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   
-  axios.get(apiUrl).then(displayTemp);
+    axios.get(apiUrl).then(displayTemp);
+  }
+  
+  function searchSubmit(event) {
+    event.preventDefault();
+    let cityInput = document.querySelector("#city-input");
+    search(cityInput.value);
+  }
+  
+  let form = document.querySelector("#search-form");
+  form.addEventListener("submit", searchSubmit);
   
