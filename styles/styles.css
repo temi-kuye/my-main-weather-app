@@ -60,3 +60,18 @@ body {
   .weather-temp .active {
     color: #000;
   }
+  .forecast {
+    margin-top: 20x;
+    text-align: center;
+  }
+  .forecast-date {
+    font-size: 16px;
+    color: #7c12df;
+    font-weight: bold;
+  }
+  .forecast-temps {
+    color: #8d08da;
+  }
+  .forecast-max-temp {
+    font-weight: bold;
+  }
