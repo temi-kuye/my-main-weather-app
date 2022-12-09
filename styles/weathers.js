@@ -21,6 +21,27 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
   }
   
+function displayForecast() {
+    let forecast = document.querySelector("#forecast");
+    let forecastHTML =  `<div class="row">`;
+    let days = [ "Sat", "Sun", "Mon", "Tue", "Wed", "Thu"];
+    days.forEach(function (day) {
+
+forecastHTML = forecastHTML + `<div class="col-2"> 
+<div class="forecast-date">${day}</div>
+        <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="45">
+       <div class="forecast-temps">
+        <span class="forecast-max-temp">16</span> 
+        <span class="forecast-min-temp">12</span>
+</div>
+    </div>`;
+    
+});
+
+forecastHTML = forecastHTML + `</div>`;
+forecast.innerHTML = forecastHTML;
+}
+
   function displayTemp(response) {
     let temperature = document.querySelector("#temp");
     let city = document.querySelector("#city");
@@ -29,6 +50,7 @@ function formatDate(timestamp) {
     let wind = document.querySelector("#windSpeed");
     let todaysDate = document.querySelector("#date");
     let weatherIcon = document.querySelector("#icon");
+   
     celsiusTemp = response.data.main.temp;
     temperature.innerHTML = Math.round(response.data.main.temp);
     city.innerHTML = response.data.name;
@@ -84,3 +106,5 @@ function formatDate(timestamp) {
   let celsius = document.querySelector("#celsius-link");
   celsius.addEventListener("click", convertCelsiusTemp);
   
+  search("Lagos"); 
+  displayForecast();
